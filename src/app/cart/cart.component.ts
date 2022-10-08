@@ -30,7 +30,8 @@ export class CartComponent implements OnInit {
     // Process checkout data here
     this.items = this.cartService.clearCart();
     console.warn('Your order has been submitted', this.checkoutForm.value);
-    console.warn('abcd', this.checkoutForm.value.name as String);
+    let userName = this.checkoutForm.controls['name'].value;
+    console.warn('abcd', userName);
     this.checkoutForm.reset();
   }
 
