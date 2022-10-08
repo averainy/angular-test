@@ -13,5 +13,10 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  clearCart():void{
+    this.cartService.clearCart();
+    this.items = this.cartService.getItems();
+    window.alert('clear cart');
+  }
 
 }
